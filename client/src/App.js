@@ -6,7 +6,6 @@ import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 import axios from "axios";
 
-const API_KEY = "0e44518607728d9035aa3f79e8bd1ea8";
 const API_ID = "9e6d67a2";
 const APP_KEY = "6a7ee4e4bd8663d94778899ede342852";
 
@@ -14,7 +13,7 @@ const APP_KEY = "6a7ee4e4bd8663d94778899ede342852";
 class App extends Component {
   state = {
     searchTerms: [],
-    recipes: []
+    recipes: [],
   }
 
   getRecipe = async (e) => {
@@ -25,13 +24,20 @@ class App extends Component {
     axios.get(query)
     .then( response => {
     this.setState({ recipes: response.data.hits})
-      console.log(response.data.hits);
+    console.log(this.state.recipes)
     })
-    // const api_call = await fetch(`https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=5`);
-    // const data = await api_call.json();
-    // this.setState({ recipes: data.recipes })
-    // console.log(this.state.searchTerms)
   };
+
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({ recipes })
+  }
+
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes);
+  }
 
   render() {
     return (

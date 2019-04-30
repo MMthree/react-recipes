@@ -1,17 +1,15 @@
 body {
     background-color: black;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.26) ),url("/ingredients2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Oswald', sans-serif;
 }
 
 .jumbotron {
     border-radius: 0 !important;
 }
 
-.header {
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.26) ),url("/ingredients2.jpg") no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-}
 
 .header_title {
     font-family: 'Kaushan Script', cursive;
@@ -32,7 +30,7 @@ body {
 }
 
 input[name=recipeSearch] {
-    background-color: rgb(219, 219, 219);
+    background-color: #dbdbdb;
     border: 0;
     color: rgb(136, 25, 25);
 }
@@ -60,8 +58,16 @@ input[name=recipeSearch]:after {
     border-radius: 0;
 }
 
+a {
+    color: rgb(235, 235, 235);
+}
+
+a:hover {
+    color: rgb(212, 182, 182);
+    text-decoration: none;
+}
 .search_card {
-    background-color: white;
+    background-color: #ffffffe3;
     color: #881919;
     border-radius: 3px;
     margin: 10px 5px 10px 5px;
@@ -75,6 +81,22 @@ input[name=recipeSearch]:after {
     height: 100%;
 }
 
-.healthLabels {
-    font-size: .6rem;
+.recipe_title {
+    font-size: 1.3rem;
 }
+
+.health_label {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.ingredient_title {
+    font-size: .9rem;
+}
+
+ul {
+    font-size: .9rem;
+    font-weight: 300;
+    list-style-type: circle;
+    margin-bottom: 5px;
+  }
