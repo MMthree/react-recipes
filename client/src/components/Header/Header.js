@@ -4,8 +4,9 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-                <div className="jumbotron text-center">
-                    <h1>Reciper Searching Machine</h1>
+                <div className="jumbotron header text-center">
+                    <p className="header_title">Let's Cook!</p>
+                    <p className="header_description">Search recipes with specific ingredients</p>
                 </div>
             </div>
         )
