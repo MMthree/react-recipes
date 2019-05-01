@@ -50,12 +50,14 @@ input[name=recipeSearch]:after {
     background-color: #881919;
     color: rgb(235, 235, 235);
     border-radius: 0;
+    cursor:pointer;
 }
 
 .recipeSearch_btn:hover {
     background-color: rgb(196, 35, 35);
     color: rgb(212, 182, 182);
     border-radius: 0;
+    cursor:pointer;
 }
 
 a {

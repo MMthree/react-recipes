@@ -6,8 +6,8 @@ import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 import axios from "axios";
 
-const API_ID = "9e6d67a2";
-const APP_KEY = "6a7ee4e4bd8663d94778899ede342852";
+const API_ID = process.env.REACT_APP_API_ID;
+const APP_KEY = process.env.REACT_APP_APP_KEY;
 
 
 class App extends Component {

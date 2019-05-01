@@ -23,8 +23,6 @@ class Recipe extends React.Component {
         this.setState({ calories: round });
         this.setState({ activeRecipe: response.data[0] });
         this.setState({ ingredients: response.data[0].ingredientLines});
-        console.log(this.state.ingredients);
-        console.log(this.state.calories);
         });
     };
 
