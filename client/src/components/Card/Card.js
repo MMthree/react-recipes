@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = props => (
+
     <div className="my-3">
         <div className="row">
-            { props.recipes.map((recipe) => {
+            { props.recipes && props.recipes.map((recipe) => {
                 return (
                     
                     <div key={recipe.recipe.label} className="col-12 col-sm-6 col-md-4">

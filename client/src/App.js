@@ -24,7 +24,6 @@ class App extends Component {
     axios.get(query)
     .then( response => {
     this.setState({ recipes: response.data.hits})
-    console.log(this.state.recipes)
     })
   };
 
