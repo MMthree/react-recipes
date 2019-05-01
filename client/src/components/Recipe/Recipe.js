@@ -16,7 +16,7 @@ class Recipe extends React.Component {
     componentDidMount = () => {
         const recipeID = this.props.location.state.recipe;
         const ID = recipeID.split("#");
-        const req = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23${ID}&app_id=${API_ID}&app_key=${APP_KEY}`;
+        const req = `https://api.edamam.com/search?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23${ID}&app_id=${API_ID}&app_key=${APP_KEY}`;
         axios.get(req)
         .then( response => {
         const round = Math.round(response.data[0].calories);
