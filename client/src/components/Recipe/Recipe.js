@@ -40,7 +40,7 @@ class Recipe extends React.Component {
                         </Link>
                     </div>
 
-                        <div className="col-12 search_card mt-0">
+                        <div className="col-12 search_card mt-0 shadow">
                             <div className="row">
                                 <div className="col-12 col-sm-5 my-auto px-0">
                                     <img className="recipe_img" alt={recipe.label} src={recipe.image} width="100%"></img>
