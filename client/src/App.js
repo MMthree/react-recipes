@@ -19,7 +19,7 @@ class App extends Component {
   getRecipe = async (e) => {
     e.preventDefault();
     const recipeName = e.target.elements.recipeSearch.value;
-    const query = `https://api.edamam.com/search?q=${recipeName}&app_id=${API_ID}&app_key=${APP_KEY}&from=0&to=18`;
+    const query = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${recipeName}&app_id=${API_ID}&app_key=${APP_KEY}&from=0&to=18`;
     this.setState({ searchTerms: recipeName });
     axios.get(query)
     .then( response => {
